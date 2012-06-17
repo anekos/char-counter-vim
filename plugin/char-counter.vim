@@ -14,7 +14,7 @@ let anekos_charCounter=1
 augroup CharCounter
 	autocmd!
 	autocmd BufCreate,BufEnter * call <SID>Initialize()
-	autocmd BufUnload,FileWritePre,BufWritePre * call <SID>Update()
+	autocmd BufUnload,FileWritePre,BufWritePre,InsertLeave * call <SID>Update()
 augroup END
 
 function! s:Initialize()
